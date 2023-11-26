@@ -1,0 +1,157 @@
+% 文档类声明，指定了使用 article 类型和 A4 纸张大小。
+\documentclass[a4paper]{article}
+\usepackage{expl3}
+
+% 引入各种数学符号和数学排版工具。
+\usepackage{amsmath}
+% 用于更复杂的表格排版。
+\usepackage{array}
+% 提供更多的数学符号。
+\usepackage{amssymb}
+% 用于标题目录的自定义样式。
+\usepackage{titletoc}
+% 用于标题样式的自定义。
+\usepackage{titlesec}
+% 计算长度，通常用于布局设计。
+\usepackage{calc}
+% 提供更多关于浮动体的控制选项。
+\usepackage{float}
+% 自定义图表和表格标题的样式。
+\usepackage{caption}
+% 提供子图表的支持。
+\usepackage{subcaption}
+% 提供书签功能，与 hyperref 宏包协同工作。
+\usepackage{bookmark}
+% 设置页面大小和边距。
+\usepackage{geometry}
+% 提供超链接功能。
+\usepackage{hyperref}
+% XeLaTeX专用宏包，用于字体选择等。
+\usepackage{xltxtra,fontspec,xunicode}
+% 使用 Type1 字体编码。
+\usepackage{type1cm}
+% 提供用于花体手写字体的支持。
+\usepackage{mathrsfs}
+% 另一种手写体风格的宏包。
+\usepackage{calligra}
+% 用于设置背景的宏包。
+\usepackage{background}
+% 引入图像和处理图片的宏包。
+\usepackage{graphicx}
+% 使用现代字体。
+\usepackage{lmodern}
+% 设置字体编码为 T1。
+\usepackage[T1]{fontenc}
+% 引入哥特花体宏包。
+\usepackage{yfonts}
+% 引入另一个花体字体宏包。
+\usepackage{aurical}
+% 用于生成填充文本。
+\usepackage{lipsum}
+% 使用 Times 字体的数学字体版本。
+\usepackage{mathptmx}
+%为字体添加阴影
+\usepackage{shadowtext}
+% 用于旋转对象
+\usepackage{rotating} 
+% 中文断行设置。
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+% xeCJK 宏包设置，允许斜体和粗体。
+\usepackage[slantfont,boldfont]{xeCJK}
+% 设置默认的中文字体为黑体。
+\setCJKmainfont{Hei}
+% 设置等宽字体为黑体。
+\setCJKmonofont{Hei}
+% 设置默认的英文衬线字体为 Arial。
+\setmainfont{Arial}
+% 设置默认的英文等宽字体为 Monaco。
+\setmonofont{Monaco}
+% 设置默认的英文无衬线字体为 Trebuchet MS。
+\setsansfont{Trebuchet MS}
+% 自定义字号命令。
+\newcommand{\yihao}{\fontsize{26pt}{36pt}\selectfont}           % 一号, 1.4 倍行距
+\newcommand{\erhao}{\fontsize{22pt}{28pt}\selectfont}          % 二号, 1.25倍行距
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont}          % 小二, 单倍行距
+\newcommand{\sanhao}{\fontsize{16pt}{24pt}\selectfont}        % 三号, 1.5倍行距
+\newcommand{\xiaosan}{\fontsize{15pt}{22pt}\selectfont}        % 小三, 1.5倍行距
+\newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}            % 四号, 1.5 倍行距
+\newcommand{\banxiaosi}{\fontsize{13pt}{19.5pt}\selectfont}    % 半小四, 1.5倍行距
+\newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}            % 小四, 1.5倍行距
+\newcommand{\dawuhao}{\fontsize{11pt}{11pt}\selectfont}       % 大五号, 单倍行距
+\newcommand{\wuhao}{\fontsize{10.5pt}{15.75pt}\selectfont}    % 五号, 单倍行距
+
+
+% 设置文档的边距。
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+% 设置节标题的字体大小。
+\titleformat*{\section}{\fontsize{14pt}{21pt}}
+\titleformat*{\subsection}{\fontsize{12pt}{18pt}}
+\titleformat*{\subsubsection}{\fontsize{12pt}{18pt}}
+\title{\xiaosan 团簇}  
+% 设置文章标题、作者、日期。
+\author{cathayana(3210100360),指导老师：xxx}
+\date{}
+
+% 重新定义摘要名称和目录名称。
+\renewcommand{\abstractname}{}
+% 自定义目录项的样式。
+\renewcommand{\contentsname}{\centerline{目\quad 录}}
+\titlecontents{section}[2em]{\bfseries \wuhao \vspace{10pt}}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{subsection}[4em]{\wuhao}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{subsubsection}[7em]{\wuhao}{\contentslabel{3em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{paragraph}[11em]{\wuhao}{\contentslabel{4em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+
+% 超链接设置，隐藏链接颜色和边框。
+\hypersetup{hidelinks}
+
+% 设置背景图像
+\backgroundsetup{
+scale=1,
+color=white,
+opacity=1,
+angle=0,
+contents={%
+ \includegraphics[width=\paperwidth,height=\paperheight]{./image/yang.png}
+  }
+}
+
+
+% 定义一个新命令用于竖排文本
+\newcommand{\verticaltext}[1]{%
+  \begingroup % 开始局部分组
+  \def\arraystretch{0.05} % 设置行间距为0
+  \setlength{\tabcolsep}{0pt} % 设置列间距为0
+  \begin{tabular}[t]{@{}c@{}} % 开始无间距的表格
+  \verticalletters#1\end%
+  \end{tabular}%
+  \endgroup % 结束局部分组
+}
+
+% 定义一个新命令用于逐字母输出
+\def\verticalletters#1{%
+  \ifx#1\end% 检查是否结束
+    \let\next\relax% 结束递归
+  \else%
+    \scalebox{1}[-1]{#1}\\% 输出当前字母并垂直翻转
+    \let\next\verticalletters% 继续处理下一个字母
+  \fi%
+  \next% 继续递归处理或结束
+}
+
+
+% 定义一个新命令用于拆分并竖排文本
+\newcommand{\verticalsentence}[1]{%
+  \verticalwords#1 \end
+}
+
+% 定义一个新命令用于递归处理每个单词
+\def\verticalwords#1 {%
+  \ifx\end#1% 检查是否结束
+    \let\next\relax% 结束递归
+  \else%
+    \verticaltext{#1}\hspace{-2em}\quad% 输出当前单词的竖排文本并添加间隔
+    \let\next\verticalwords% 继续处理下一个单词
+  \fi%
+  \next% 继续递归处理或结束
+}

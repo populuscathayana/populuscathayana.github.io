@@ -1,0 +1,77 @@
+% 文档内容开始
+\begin{document}
+\Huge
+% 使用mathrsfs宏包的花体字母
+ $\mathscr{ABCDEF}$.
+
+% 使用calligra宏包的花体字母
+{\calligra ABCDEF}.
+
+{\gothfamily
+Text in Fraktur Blackletter for the entire document.
+}
+
+% 切换到哥特字体
+\textgoth{Text in Gothic Blackletter.}
+
+% 切换到斯瓦比亚哥特字体
+\textswab{Text in Swabian Blackletter.}
+
+% 切换到弗拉克图哥特字体
+\textfrak{Text in Fraktur Blackletter.}
+
+\shadowtext{\textfrak{Text in Fraktur Blackletter.}}
+
+{\Fontauri This is an example of Auriocus Kalligraphicus.}
+\shadowtext{
+\fontspec{Hei}{好wed}
+\fontspec{黑体}{好weq}
+\fontspec{幼圆}{好wead}
+}
+
+\fontspec{longmai-Regular}{好wead}
+
+%使用分单词输出需要给出参数\hspace{-1.5em}
+\fontspec{longmai}{
+\verticaltext{Hello}\hspace{-1.5em}
+\verticaltext{World.}\hspace{-1.5em}
+\verticaltext{This}\hspace{-1.5em}
+\verticaltext{is}\hspace{-1.5em}
+\verticaltext{vertical}\hspace{-1.5em}
+\verticaltext{text!}
+}
+
+
+%使用句子自动分割输出的已经自动给出参数，注意参数仅适用于当前字体longmai-Regular或者longmai
+\fontspec{longmai}{
+\verticalsentence{No matter how many times I attempt to reach it, the outcome will never change. But still I continue to fight.}
+}
+
+
+\shadowtext{
+{\Fontauri This is an example of Auriocus Kalligraphicus.}
+}
+\normalsize
+\newpage
+\begin{figure}[ht]
+  \centering
+  % 第一张子图
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{./image/eda/eda1.jpg}
+    \caption{Eda1}
+    \label{fig:sub1}
+  \end{subfigure}
+  \hfill % 在子图之间添加一些水平空间
+  % 第二张子图
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{./image/eda/eda2.jpg} 
+    \caption{Eda2}
+    \label{fig:sub2}
+  \end{subfigure}
+  % 如果你有更多的子图，可以继续添加更多的subfigure环境
+  \caption{两张图片的示例}
+  \label{fig:test}
+\end{figure}
+
+
+\end{document}

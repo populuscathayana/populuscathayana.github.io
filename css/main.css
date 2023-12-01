@@ -23,9 +23,9 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 body{
-  background:url(/downloads/eda_moon.jpg);
+  background:url("/downloads/eda_moon.jpg");
   background-repeat:no-repeat;
-  background-attachment fixed;
+  background-attachment:fixed;
   background-size:cover;
   background-position:center;
 }
@@ -33,7 +33,7 @@ body{
 .content-wrap {
   background-color: white;
   padding: 30px;
-  opacity : 0.9;
+  opacity : 0.6;
 }
 
 ._sidebar {

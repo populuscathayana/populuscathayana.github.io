@@ -22,23 +22,6 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-body{
-  background:url("/downloads/eda_moon.jpg");
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-size:cover;
-  background-position:center;
-}
-
-.content-wrap {
-  background-color: white;
-  padding: 30px;
-  opacity : 0.6;
-}
-
-._sidebar {
-  opacity : 0.9;
-}
 
 
 main {
@@ -191,7 +174,7 @@ body {
   height: 100%;
 }
 body {
-  background: var(--body-bg-color);
+  /* background: var(--body-bg-color); */
   color: var(--text-color);
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;

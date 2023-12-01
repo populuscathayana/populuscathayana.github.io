@@ -23,7 +23,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 body{
-  background:url(/downloads/longmai/eda_moon.jpg);
+  background:url(/downloads/eda_moon.jpg);
   background-repeat:no-repeat;
   background-attachment fixed;
   background-size:cover;

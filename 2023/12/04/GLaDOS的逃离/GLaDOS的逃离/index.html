@@ -2,7 +2,21 @@
 <html lang="zh-CN">
 <head>
   <!--pjax: 防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var typed = new Typed('#typed-output', {
+      strings: ["world.execute(me);", "Error"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: False,
+      onComplete: function(self) {
+        // 动画完成后的操作
+      }
+    });
+  });
+</script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -161,6 +175,7 @@
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
+        <div id="typed-output"></div>
           
 
           <div class="content post posts-expand">

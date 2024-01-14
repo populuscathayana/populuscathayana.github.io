@@ -16,7 +16,10 @@
         // 应该没人看源码吧，对吗？
         // 柳，如果是你，我想说的是，我们来世再遇吧...
         setTimeout(function() {
-          document.getElementById('typed-output').innerHTML = '';
+          var codeBox = document.querySelector('.code-box');
+          codeBox.innerHTML = ''; // 清除文本
+          codeBox.style.backgroundColor = 'transparent'; // 清除背景色
+          codeBox.style.borderColor = 'transparent'; // 清除边框颜色
         }, delay);
       }
     });
@@ -173,7 +176,9 @@
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-        <div id="typed-output"></div>
+        <div class="code-box">
+          <div id="typed-output"></div>
+        </div>
           
 
           <div class="content post posts-expand">

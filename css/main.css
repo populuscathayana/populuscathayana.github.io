@@ -2305,3 +2305,10 @@ embed {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.typed-output {
+  font-size: 20px; /* 字体大小 */
+  color: #13abe8; /* 字体颜色 */
+  padding: 10px; /* 内边距 */
+  /* 其他样式根据需要添加 */
+}

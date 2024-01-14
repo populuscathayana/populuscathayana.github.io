@@ -7,12 +7,13 @@
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     var typed = new Typed('#typed-output', {
-      strings: ["world.execute(me)", "Error..."],
-      typeSpeed: 20,
+      strings: ["world.execute(me)", "502 Bad Gateway","world.search(you)","404 Not Found","世界線変動率","1.0485966064120757490485402740887366235256195068359375%"],
+      typeSpeed: 10,
       backSpeed: 25,
       loop: false,
       onComplete: function(self) {
-        // 动画完成后的操作
+        // 动画完成后清除文字 .typed-cursor.typed-cursor--blink
+        // document.getElementById('typed-output').innerHTML = '';
       }
     });
   });
